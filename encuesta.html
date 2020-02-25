@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Lectura</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type="text/javascript" src="js/script.js"></script>
+
+</head>
+
+<body>
+    <div class="container" style="width: 60%;">
+        <form class="border border-light p-5" name="encuesta">
+
+            <p class="h4 mb-4">Encuesta de Lectura</p>
+            <section class="row">
+                <div class="col">
+                    <p>1- ¿Le gusta leer?</p>
+                </div>
+            </section>
+            <section class="row" style="padding: 0.5em 1em;">
+                <div class="col-md-3">
+                    <label> <input type="radio" name="pregunta1" value="Mucho"> Mucho </label>
+                </div>
+                <div class="col-md-3">
+                    <label><input type="radio" name="pregunta1" value="Regular"> Regular </label>
+                </div>
+                <div class="col-md-3">
+                    <label><input type="radio" name="pregunta1" value=" Casi nada"> Casi nada</label>
+                </div>
+                <div class="col-md-3">
+                    <label><input type="radio" name="pregunta1" value="Nada"> Nada </label>
+                </div>
+            </section>
+            <section class="row">
+                <div class="col">
+                    <p>2- Los libros que lee, generalmente...</p>
+                </div>
+
+            </section>
+            <section class="row" style="padding:0.5em 1em;" id="pregunta2">
+                <div class="col-md-3">
+                    <label>  <input type="checkbox"  value="Los compra"> Los compra </label>
+                </div>
+                <div class="col-md-3">
+                    <label><input type="checkbox"  value="Se los regalan"> Se los regalan</label>
+                </div>
+                <div class="col-md-3">
+                    <label> <input type="checkbox" value="Suelen ser prestados"> Suelen ser prestados</label>
+                </div>
+                <div class="col-md-3">
+                    <label> <input type="checkbox" value="Los toma de las bibliotecas"> Los toma de las bibliotecas</label>
+                </div>
+            </section>
+            <section class="row">
+                <div class="col">
+                    <p>3- ¿Qué momento del día prefiere para la lectura? </p>
+                </div>
+            </section>
+            <section class="row" style="padding: 0.5em 1em;">
+                <div class="col-md-3">
+                    <label><input type="radio" name="pregunta3" value="Al acostarse"> Al acostarse</label>
+                </div>
+                <div class="col-md-3">
+                    <label><input type="radio" name="pregunta3" value="Al levantarse"> Al levantarse</label>
+                </div>
+                <div class="col-md-3">
+                    <label><input type="radio" name="pregunta3"  value="Durante el día"> Durante el día</label>
+                </div>
+                <div class="col-md-3">
+                    <label><input type="radio" name="pregunta3" value="Durante el atardecer o la noche"> Durante el atardecer o la noche</label>
+                </div>
+            </section>
+
+            <hr>
+            <section class="row">
+                <div class="col-md-4">
+                    <p>4- Libros favoritos... </p>
+                </div>
+            </section>
+            <section class="row" style="padding:0.5em 1em;">
+                <div class="col" id="listaLibros">
+
+                </div>
+                <div class="container" style="margin: 20px;"><input type="button" onclick="agregar('listaLibros')" value="Añadir"> <input type="button" onclick="eliminar('listaLibros')" value="Eliminar"></div>
+            </section>
+            <hr>
+            <section class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="comment">Comentario:</label><br/>
+                        <textarea class="form-control" id="comentar" rows="6" id="texto" maxlength="200" onkeyup="contardor()" style="resize: none;"></textarea>
+                        <small id="numCaracteres">Máximo 200 carácteres</small>
+                    </div>
+                </div>
+            </section>
+            <div class="text-center container">
+                <button class="btn my-4" onclick="enviar()" style="background-color: #34495E; color: #D6DBDF;; width: 40%;">Enviar</button>
+                <button class="btn my-4" type="reset" style="background-color: #34495E; color: #D6DBDF;; width: 40%;">Restablecer</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+
+</body>
+
+</html>
